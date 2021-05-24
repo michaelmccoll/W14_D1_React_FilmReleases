@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import FilmReleases from './containers/FilmReleases';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Upcomming Film Releases in UK</h1>
+      <hr></hr>
+        <FilmReleases/>
+      <hr></hr>
+      <form action="https://www.imdb.com/calendar/?region=gb">
+        <input type="submit" value="View more upcomming releases" />
+      </form>
+    </>
   );
 }
 
